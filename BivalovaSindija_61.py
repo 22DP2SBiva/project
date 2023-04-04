@@ -1,6 +1,11 @@
-temperatura = [15,20,26,23,27,25,28] # aizpilda masīvu ar dotajām temperatūrām
+diena = ['pirmdiena', 'otrdiena', 'trešdiena', 'ceturtdiena', 'piektdiena', 'sestdiena', 'svētdiena']
+temperatura = [0] * 7 # definējam masīvu ar 7 elementiem
+
+for numurs in range(7): # ievadām masīva elementus
+    temperatura[numurs] = int(input('Ievadiet ' + diena[numurs] + 's gaisa temperatūru: '))
+
 dienu_skaits = 0
 for numurs in range(7):
     if temperatura[numurs] > 25:
         dienu_skaits = dienu_skaits + 1 # dienu saskaitīšana
-print('Karstāko dienu skaits bija', dienu_skaits)
+print('Nedēļas karstāko dienu skaits bija', dienu_skaits)
